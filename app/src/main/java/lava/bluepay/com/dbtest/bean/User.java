@@ -16,6 +16,7 @@ public class User {
     @DbField("password")
     private String password;
 
+
     public User(Integer id, String name, String password) {
         this.id = id;
         this.name = name;

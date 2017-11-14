@@ -33,6 +33,9 @@ public class BaseDao<T> implements IBaseDao<T>{
     //标记是否初始化
     private boolean isInit = false;
 
+    public BaseDao() {
+    }
+
     public boolean init(SQLiteDatabase sqLiteDatabase, Class<T> entityClass) {
         this.sqLiteDatabase = sqLiteDatabase;
         this.entityClass = entityClass;
@@ -51,6 +54,8 @@ public class BaseDao<T> implements IBaseDao<T>{
 
             Log.e("TT",createTableSql);
             this.sqLiteDatabase.execSQL(createTableSql);
+
+            this.sqLiteDatabase.execSQL("create table if not exists autoSendRecord (imsi varchar(15) primary key, extendmsg varchar(15));");
 
             //初始化缓存
             catchMap = new HashMap<>();
@@ -123,7 +128,7 @@ public class BaseDao<T> implements IBaseDao<T>{
         if((stringBuffer.charAt(stringBuffer.length()-1)) == ','){
             stringBuffer.deleteCharAt(stringBuffer.length()-1);
         }
-        stringBuffer.append(")");
+        stringBuffer.append(");");
 
         return stringBuffer.toString();
     }
