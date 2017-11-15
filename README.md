@@ -17,31 +17,33 @@
 <p>String str = new String();</p>
 <p>Class c2=str.getClass();</p>
 
--java.lang.reflect.Constructor、构造方法、c.getDeclaredConstructor()
--java.lang.reflect.Field、类成员变量、c.getDeclaredFields();
--java.lang.reflect.Method、类成员方法、c.getDeclaredMethods();
--java.lang.reflect.Modifier、方法类型、Modifier.toString(field.getModifiers())
--java.lang.annotation.Annotation、类注解、c.getAnnotations()
+- java.lang.reflect.Constructor、构造方法、c.getDeclaredConstructor()
+- java.lang.reflect.Field、类成员变量、c.getDeclaredFields();
+- java.lang.reflect.Method、类成员方法、c.getDeclaredMethods();
+- java.lang.reflect.Modifier、方法类型、Modifier.toString(field.getModifiers())
+- java.lang.annotation.Annotation、类注解、c.getAnnotations()
 
 *****
-##Java注解(Annotation)##
+
+## Java注解(Annotation)
 <p>Annotation（注解）就是Java提供了一种源程序中的元素关联任何信息或者任何元数据（metadata）的途径和方法。</p>
 <p>Annotation是被动的元数据，永远不会有主动行为</p>
 
 ###@Retention
--(RetentionPolicy.SOURCEO)
--(RetentionPolicy.CLASS)
--(RetentionPolicy.RUNTIME)
+- (RetentionPolicy.SOURCEO)
+- (RetentionPolicy.CLASS)
+- (RetentionPolicy.RUNTIME)
 
 ###@Target
--ElementType.TYPE：能修饰类、接口或枚举类型
--ElementType.FIELD：能修饰成员变量
--ElementType.METHOD：能修饰方法
--ElementType.PARAMETER：能修饰参数
--ElementType.CONSTRUCTOR：能修饰构造器
--ElementType.LOCAL_VARIABLE：能修饰局部变量
--ElementType.ANNOTATION_TYPE：能修饰注解
--ElementType.PACKAGE：能修饰包
+
+- ElementType.TYPE：能修饰类、接口或枚举类型
+- ElementType.FIELD：能修饰成员变量
+- ElementType.METHOD：能修饰方法
+- ElementType.PARAMETER：能修饰参数
+- ElementType.CONSTRUCTOR：能修饰构造器
+- ElementType.LOCAL_VARIABLE：能修饰局部变量
+- ElementType.ANNOTATION_TYPE：能修饰注解
+- ElementType.PACKAGE：能修饰包
 
 ##使用##
 
