@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 时间三要素(设置监听、事件类型、回调)
+ *  事件三要素(设置监听、事件类型、回调)
  */
 
 @Target(ElementType.ANNOTATION_TYPE)
